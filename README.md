@@ -4,7 +4,7 @@ Bl3ep - Dutch Bitonic bitcoin exchange command line interface price viewer writt
 The bl3p tool connects to the public bl3p API and retrieve the price as an integer, compares with previous value and shows it in green or red color, every dot currently represents 5 seconds.
 
 
-## How it 
+## How it works 
 
 just run the tool from command line, if you are afraid, as I know you are, just read it to see how simple it is.
 
