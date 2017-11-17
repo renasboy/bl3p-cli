@@ -12,7 +12,7 @@ just run the tool from command line, if you are afraid, as I know you are, just 
 ```shell
 git clone https://github.com/renasboy/bl3p-cli
 cd bl3p-cli
-cat bl3p
+cat -e bl3p
 
 ```
 
