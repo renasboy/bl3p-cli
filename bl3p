@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function getBl3p() {
+    old_price=0
+    while : ; do
+        price=$(curl -s 'https://bl3p.eu/trade?part=trade.lasttrade' -H 'Accept: application/json' --compressed | awk -F '[,:]' '{ print $4 }')
+        price=${price/.*/}
+        if [ $price -ne $old_price ]; then
+            color="[49;32m"
+            if [ $price -lt $old_price ]; then
+                color="[49;91m"
+            fi
+            old_price=$price
+            echo
+            echo $color$price"[00m"
+        else
+            echo -n .
+        fi
+        sleep 5
+    done
+}
+
+getBl3p
+
